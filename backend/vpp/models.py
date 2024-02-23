@@ -32,10 +32,4 @@ from . import views
 
 urlpatterns = [
     path('dashboard/', views.member_dashboard, name='dashboard'),
-    path('api/member/', views.MemberList.as_view(), name='member-list'),
-    path('api/member/<int:pk>/', views.MemberDetail.as_view(), name='member-detail'),
-    path('api/device/', views.DeviceList.as_view(), name='device-list'),
-    path('api/device/<int:pk>/', views.DeviceDetail.as_view(), name='device-detail'),
-    path('api/energydata/', views.EnergyDataList.as_view(), name='energydata-list'),
-    path('api/energydata/<int:pk>/', views.EnergyDataDetail.as_view(), name='energydata-detail'),
 ]
