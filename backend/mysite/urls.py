@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
-from rest_framework.viewsets import ViewSet
+from rest_framework import serializers, viewsets
 
 # Serializers define the API representation.
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -24,7 +24,7 @@ router.register(r'users', UserViewSet)
 urlpatterns = [
     path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('vpp/', include('vpp.urls')),
+    path('', include('vpp.urls')),
     path("admin/", admin.site.urls),
 ]
 

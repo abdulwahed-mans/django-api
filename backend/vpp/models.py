@@ -24,12 +24,3 @@ class EnergyData(models.Model):
     energy_value = models.FloatField()  # Energy produced, consumed, etc.
     # ... other energy data related fields
 
-
-### API Endpoints (Outlined)
-# Path: backend/vpp/urls.py
-from django.urls import path
-from . import views
-
-urlpatterns = [
-    path('dashboard/', views.member_dashboard, name='dashboard'),
-]
